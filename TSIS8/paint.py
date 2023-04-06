@@ -29,7 +29,7 @@ while running:
                 pygame.draw.circle(SCREEN,mode,(start_pointsx,start_pointsy),((start_pointsx-x)**2+(start_pointsy-y)**2)**0.5,font)
                 started=False
             if started and shape==2:
-                pygame.draw.rect(SCREEN,mode,pygame.Rect(start_pointsx,start_pointsy,abs(start_pointsx-x),abs(start_pointsy-y)),font)
+                pygame.draw.rect(SCREEN,mode,pygame.Rect(min(start_pointsx,x),min(start_pointsy,y),abs(start_pointsx-x),abs(start_pointsy-y)),font)
                 started=False
                 
         if event.type==pygame.KEYDOWN:
